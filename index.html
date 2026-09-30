@@ -1,0 +1,1897 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bhargava — Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-icons-font@16.31.0/font/simple-icons.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #e6e7e9;
+        padding: 12px;
+        font-family: "Montserrat", sans-serif;
+        color: #3f4145;
+        line-height: 1.5;
+      }
+
+      header {
+        position: sticky;
+        top: 16px;
+        z-index: 999;
+      }
+
+      .header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 18px;
+        border-radius: 28px;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        gap: 10px;
+        flex-wrap: nowrap;
+      }
+
+      .logo-text {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        color: #64748b;
+        white-space: nowrap;
+      }
+
+      .logo-text em {
+        color: #7d2ae8;
+        font-size: 28px;
+        font-style: normal;
+      }
+
+      .nav-items {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      .nav-items a {
+        color: #3f4145;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.2s ease;
+      }
+
+      .nav-items a:hover {
+        color: #7d2ae8;
+      }
+
+      .btn-primary {
+        background: #7d2ae8;
+        color: #fff;
+        border: 1px solid #7d2ae8;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 28px;
+        cursor: pointer;
+        white-space: nowrap;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-primary:hover {
+        background: #6420c7;
+        border-color: #6420c7;
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: #7d2ae8;
+        border: 1px solid #7d2ae8;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 28px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-ghost:hover {
+        background: #7d2ae8;
+        color: #fff;
+      }
+
+      section {
+        padding: 80px 40px;
+        scroll-margin-top: 100px;
+      }
+
+      .hero-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+      }
+
+      .hero-text .hello {
+        font-size: 20px;
+        color: #6b6d70;
+        margin-bottom: 12px;
+      }
+
+      .hero-text .hero-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -2px;
+        color: #3f4145;
+        margin-bottom: 20px;
+      }
+
+      .hero-text .hero-desc {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #6b6d70;
+        margin-bottom: 25px;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 12px;
+      }
+
+      .hero-icons {
+        display: flex;
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      .hero-icon {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #7d2ae8;
+        border-radius: 50%;
+        color: #7d2ae8;
+        text-decoration: none;
+        font-size: 18px;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+
+      .hero-icon:hover {
+        background: #7d2ae8;
+        color: #fff;
+      }
+
+      .hero-avatar {
+        width: 350px;
+        height: 350px;
+        flex-shrink: 0;
+        padding: 8px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .hero-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .row-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .row-heading hr {
+        flex-grow: 1;
+        border: none;
+        height: 1px;
+        border-top: 5px solid #3f4145;
+      }
+
+      .main-about {
+        font-size: 42px;
+        font-weight: bold;
+        color: #3f4145;
+      }
+
+      .main-about span {
+        color: #7d2ae8;
+      }
+
+      .allow-me {
+        display: block;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .aboutsec {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 45px;
+        padding: 40px 50px;
+        align-items: start;
+      }
+
+      .aboutimgsec {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .aboutimgsec img {
+        width: 90%;
+        max-width: 550px;
+        height: auto;
+        display: block;
+        border-radius: 15px;
+      }
+
+      .mainpara {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        color: #3f4145;
+        font-size: 17px;
+        line-height: 1.7;
+        text-align: left;
+      }
+
+      .mainpara span {
+        display: block;
+      }
+
+      .thingsilovediv {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 0;
+      }
+
+      .thingsilove {
+        display: block;
+        font-size: 32px;
+        font-weight: 700;
+        color: #7d2ae8;
+      }
+
+      .thingsdologos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .thingsdologos div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 10px;
+        background: #fff;
+        border: 1px solid #e6e7e9;
+        border-radius: 12px;
+      }
+
+      .thingsdologos i {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      .thingsdologos img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+
+      .thingsdologos span {
+        font-size: 14px;
+        font-weight: 600;
+        color: #3f4145;
+      }
+
+      .thingsiloveuldiv {
+        grid-column: 2;
+        grid-row: 2;
+        padding: 0;
+      }
+
+      .lookwhaticando {
+        font-size: 32px;
+        font-weight: 700;
+        color: #7d2ae8;
+      }
+
+      .thingsiloveul {
+        display: flex;
+        gap: 50px;
+        margin-top: 15px;
+      }
+
+      .thingsiloveul ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .thingsiloveul li {
+        color: #6b6d70;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .workcontainers {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .workcontainers:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        transform: translateY(-6px);
+      }
+
+      .buttonrowwork button {
+        background: #f5efff;
+        color: #7d2ae8;
+        border: 1px solid #d9c2ff;
+        font-size: 14px;
+        padding: 6px 14px;
+        border-radius: 28px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .buttonrowwork button:hover {
+        background: #7d2ae8;
+        color: #fff;
+        border-color: #7d2ae8;
+      }
+
+      .buttonworktwo a {
+        display: inline-block;
+        background: #7d2ae8;
+        color: #fff;
+        border: 1px solid #d9c2ff;
+        font-size: 14px;
+        padding: 6px 14px;
+        border-radius: 28px;
+        cursor: pointer;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+
+      .buttonworktwo a:hover {
+        background: #6420c7;
+        border-color: #6420c7;
+      }
+
+      .worknumber {
+        font-size: 18px;
+        font-weight: 700;
+        color: #7d2ae8;
+        margin-bottom: 22px;
+      }
+
+      .workheading {
+        font-size: 32px;
+        font-weight: 700;
+        color: #3f4145;
+        margin-bottom: 22px;
+      }
+
+      .workdescription {
+        font-size: 18px;
+        font-weight: 400;
+        color: #6b6d70;
+        line-height: 1.8;
+        margin-bottom: 18px;
+      }
+
+      .workdescription b {
+        color: #3f4145;
+        font-weight: 600;
+      }
+
+      .achievements {
+        display: flex;
+        gap: 32px;
+        width: 100%;
+        padding: 30px 25px;
+        align-items: stretch;
+      }
+
+      .achievementcontainer {
+        flex: 1;
+        min-width: 0;
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .achievementimage {
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+      }
+
+      .achievementimage img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      .achievementcontent {
+        padding: 28px;
+      }
+
+      .achievementnumber {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        color: #7d2ae8;
+        margin-bottom: 18px;
+      }
+
+      .achievementcontent h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        color: #3f4145;
+        margin-bottom: 16px;
+      }
+
+      .achievementcontent p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #6b6d70;
+        margin: 0;
+      }
+
+      .imgachi {
+        margin-top: 8px;
+        border-radius: 12px;
+      }
+
+      .imageupskill {
+        border-radius: 12px;
+      }
+
+      .getintouch {
+        padding: 50px 30px 70px;
+        text-align: center;
+      }
+
+      .getintouchheading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .getintouchheading hr {
+        flex: 1;
+        border: none;
+        border-top: 3px solid #3f4145;
+      }
+
+      .getintouchheading span {
+        font-size: 30px;
+        font-weight: 700;
+        color: #3f4145;
+        white-space: nowrap;
+      }
+
+      .getintouchheading b {
+        color: #7d2ae8;
+      }
+
+      .getintouchintro {
+        margin-top: 55px;
+      }
+
+      .getintouchintro h2 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #3f4145;
+        margin-bottom: 8px;
+      }
+
+      .getintouchintro h2 span {
+        color: #7d2ae8;
+      }
+
+      .getintouchintro p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: #6b6d70;
+        margin: 0;
+      }
+
+      .getintouchcontainer {
+        width: 455px;
+        margin: 25px auto 0;
+        padding: 25px 22px;
+        background: #ffffff;
+        border: 1px solid #d9c2ff;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .getintouchtitle {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        color: #7d2ae8;
+        margin-bottom: 18px;
+      }
+
+      .contactbox {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        min-height: 55px;
+        padding: 9px 12px;
+        margin-bottom: 10px;
+        background: #ffffff;
+        border: 1px solid #dedfe2;
+        border-radius: 11px;
+        text-decoration: none;
+      }
+
+      .contactbox:last-child {
+        margin-bottom: 0;
+      }
+
+      .contacticon {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        border-radius: 50%;
+        background: #f2e9ff;
+        color: #7d2ae8;
+        font-size: 14px;
+      }
+
+      .contacttext {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contacttext span {
+        font-size: 8px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #6b6d70;
+        margin-bottom: 2px;
+      }
+
+      .contacttext p {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 500;
+        color: #3f4145;
+      }
+
+      .contactbox:hover {
+        border-color: #d9c2ff;
+        background: #f8f3ff;
+      }
+
+      .contactbox:hover .contacticon {
+        background: #7d2ae8;
+        color: #ffffff;
+      }
+
+      .emailbutton {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .emailbutton a {
+        display: inline-block;
+        padding: 11px 25px;
+        background: #7d2ae8;
+        color: #ffffff;
+        border: 1px solid #7d2ae8;
+        border-radius: 28px;
+        font-size: 11px;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        transition: 0.2s;
+      }
+
+      .emailbutton a:hover {
+        background: #6420c7;
+        border-color: #6420c7;
+      }
+
+      .emailbutton a.linkedin-link {
+        background: transparent;
+        color: #7d2ae8;
+        border: 1px solid #7d2ae8;
+      }
+
+      .emailbutton a.linkedin-link:hover {
+        background: #7d2ae8;
+        color: #ffffff;
+      }
+
+      @media (max-width: 1072px) {
+        .achievements {
+          flex-direction: column;
+          gap: 25px;
+          padding: 25px 15px;
+        }
+
+        .achievementcontainer {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .aboutsec {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 35px;
+          padding: 30px 25px;
+        }
+
+        .aboutimgsec {
+          grid-column: 1;
+          grid-row: auto;
+          justify-content: center;
+        }
+
+        .aboutimgsec img {
+          width: 90%;
+          max-width: 550px;
+        }
+
+        .mainpara {
+          grid-column: 1;
+          grid-row: auto;
+          font-size: 16px;
+          line-height: 1.7;
+        }
+
+        .thingsilovediv {
+          grid-column: 1;
+          grid-row: auto;
+          padding: 0;
+        }
+
+        .thingsiloveuldiv {
+          grid-column: 1;
+          grid-row: auto;
+          padding: 0;
+        }
+
+        .thingsdologos {
+          margin-top: 15px;
+        }
+
+        .thingsiloveul {
+          margin-top: 15px;
+          gap: 30px;
+        }
+
+        .header-bar {
+          padding: 7px 12px;
+          gap: 8px;
+        }
+
+        .logo-text {
+          font-size: 20px;
+        }
+
+        .logo-text em {
+          font-size: 24px;
+        }
+
+        .nav-items {
+          gap: 10px;
+          flex-wrap: nowrap;
+        }
+
+        .nav-items a {
+          font-size: 14px;
+          white-space: nowrap;
+        }
+
+        .btn-primary {
+          font-size: 14px;
+          padding: 6px 10px;
+          white-space: nowrap;
+        }
+
+        section {
+          padding: 60px 25px;
+        }
+
+        .hero-layout {
+          gap: 30px;
+        }
+
+        .hero-text {
+          max-width: 500px;
+        }
+
+        .hero-text .hello {
+          font-size: 18px;
+        }
+
+        .hero-text .hero-title {
+          font-size: 38px;
+        }
+
+        .hero-text .hero-desc {
+          font-size: 14px;
+        }
+
+        .hero-avatar {
+          width: 280px;
+          height: 280px;
+        }
+
+        .achievements {
+          flex-direction: column;
+          gap: 25px;
+          padding: 25px 15px;
+        }
+
+        .achievementcontainer {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .header-bar {
+          padding: 6px 10px;
+          gap: 6px;
+        }
+
+        .logo-text {
+          font-size: 17px;
+        }
+
+        .logo-text em {
+          font-size: 21px;
+        }
+
+        .nav-items {
+          gap: 7px;
+          flex-wrap: nowrap;
+        }
+
+        .nav-items a {
+          font-size: 12px;
+          white-space: nowrap;
+        }
+
+        .btn-primary {
+          font-size: 12px;
+          padding: 5px 8px;
+          white-space: nowrap;
+        }
+
+        section {
+          padding: 45px 15px;
+        }
+
+        .hero-layout {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-text {
+          align-items: center;
+        }
+
+        .hero-text .hello {
+          font-size: 17px;
+        }
+
+        .hero-text .hero-title {
+          font-size: 32px;
+          letter-spacing: -1px;
+        }
+
+        .hero-text .hero-desc {
+          font-size: 13px;
+        }
+
+        .hero-avatar {
+          width: 230px;
+          height: 230px;
+        }
+
+        .hero-btns {
+          justify-content: center;
+        }
+
+        .hero-icons {
+          justify-content: center;
+        }
+
+        .aboutsec {
+          padding: 25px 15px;
+          gap: 28px;
+        }
+
+        .aboutimgsec img {
+          width: 100%;
+          max-width: 500px;
+        }
+
+        .mainpara {
+          font-size: 15px;
+          line-height: 1.6;
+          gap: 18px;
+        }
+
+        .thingsilovediv,
+        .thingsiloveuldiv {
+          padding: 0;
+        }
+
+        .thingsilove,
+        .lookwhaticando {
+          font-size: 27px;
+        }
+
+        .thingsiloveul {
+          gap: 15px;
+        }
+
+        .thingsiloveul li {
+          font-size: 14px;
+          line-height: 1.7;
+        }
+
+        .thingsdologos {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+
+        .thingsdologos i {
+          font-size: 32px;
+        }
+
+        .thingsdologos img {
+          width: 35px;
+          height: 35px;
+        }
+
+        .thingsdologos span {
+          font-size: 12px;
+        }
+
+        .getintouch {
+          padding: 35px 0 50px;
+        }
+
+        .getintouchheading {
+          gap: 8px;
+        }
+
+        .getintouchheading hr {
+          border-top: 2px solid #3f4145;
+        }
+
+        .getintouchheading span {
+          font-size: 21px;
+        }
+
+        .getintouchintro {
+          margin-top: 30px;
+        }
+
+        .getintouchintro h2 {
+          font-size: 21px;
+        }
+
+        .getintouchintro p {
+          font-size: 12px;
+          padding: 0 20px;
+        }
+
+        .getintouchintro p br {
+          display: none;
+        }
+
+        .getintouchcontainer {
+          width: 100%;
+          margin-top: 25px;
+          padding: 25px 22px;
+          border-radius: 14px;
+        }
+
+        .contactbox {
+          min-height: 55px;
+        }
+
+        .emailbutton {
+          margin-top: 22px;
+        }
+      }
+
+      @media (max-width: 485px) {
+        .header-bar {
+          padding: 5px 7px;
+          gap: 4px;
+        }
+
+        .logo-text {
+          font-size: 14px;
+        }
+
+        .logo-text em {
+          font-size: 18px;
+        }
+
+        .nav-items {
+          gap: 5px;
+          flex-wrap: nowrap;
+        }
+
+        .nav-items a {
+          font-size: 10px;
+          white-space: nowrap;
+        }
+
+        .btn-primary {
+          font-size: 10px;
+          padding: 4px 6px;
+          white-space: nowrap;
+        }
+
+        section {
+          padding: 35px 10px;
+        }
+
+        .hero-text .hello {
+          font-size: 15px;
+        }
+
+        .hero-text .hero-title {
+          font-size: 27px;
+        }
+
+        .hero-text .hero-desc {
+          font-size: 12px;
+        }
+
+        .hero-btns {
+          gap: 7px;
+        }
+
+        .btn-ghost {
+          font-size: 10px;
+          padding: 4px 8px;
+        }
+
+        .hero-icons {
+          gap: 8px;
+        }
+
+        .hero-icon {
+          width: 38px;
+          height: 38px;
+          font-size: 16px;
+        }
+
+        .aboutsec {
+          padding: 20px 10px;
+          gap: 25px;
+        }
+
+        .aboutimgsec img {
+          width: 100%;
+        }
+
+        .mainpara {
+          font-size: 14px;
+          line-height: 1.6;
+          gap: 16px;
+        }
+
+        .thingsilove,
+        .lookwhaticando {
+          font-size: 24px;
+        }
+
+        .thingsiloveul {
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .thingsiloveul ul {
+          padding-left: 20px;
+        }
+
+        .thingsiloveul li {
+          font-size: 13px;
+        }
+
+        .thingsdologos {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+
+        .thingsdologos i {
+          font-size: 30px;
+        }
+
+        .thingsdologos img {
+          width: 32px;
+          height: 32px;
+        }
+
+        .thingsdologos span {
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .header-bar {
+          padding: 4px 5px;
+          gap: 3px;
+        }
+
+        .logo-text {
+          font-size: 12px;
+        }
+
+        .logo-text em {
+          font-size: 15px;
+        }
+
+        .nav-items {
+          gap: 3px;
+          flex-wrap: nowrap;
+        }
+
+        .nav-items a {
+          font-size: 9px;
+          white-space: nowrap;
+        }
+
+        .btn-primary {
+          font-size: 9px;
+          padding: 3px 5px;
+          white-space: nowrap;
+        }
+
+        section {
+          padding: 30px 8px;
+        }
+
+        .hero-text .hello {
+          font-size: 14px;
+        }
+
+        .hero-text .hero-title {
+          font-size: 24px;
+        }
+
+        .hero-text .hero-desc {
+          font-size: 11px;
+          line-height: 1.6;
+        }
+
+        .btn-ghost {
+          font-size: 9px;
+          padding: 3px 6px;
+        }
+
+        .hero-avatar {
+          width: 190px;
+          height: 190px;
+        }
+
+        .hero-icons {
+          gap: 6px;
+        }
+
+        .hero-icon {
+          width: 34px;
+          height: 34px;
+          font-size: 14px;
+        }
+
+        .aboutsec {
+          padding: 15px 8px;
+          gap: 22px;
+        }
+
+        .mainpara {
+          font-size: 13px;
+          line-height: 1.55;
+          gap: 15px;
+        }
+
+        .thingsilove,
+        .lookwhaticando {
+          font-size: 21px;
+        }
+
+        .thingsiloveul {
+          flex-direction: column;
+        }
+
+        .thingsiloveul li {
+          font-size: 12px;
+          line-height: 1.6;
+        }
+
+        .thingsdologos {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+
+        .thingsdologos i {
+          font-size: 27px;
+        }
+
+        .thingsdologos img {
+          width: 30px;
+          height: 30px;
+        }
+
+        .thingsdologos span {
+          font-size: 10px;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1400px) {
+        .aboutsec {
+          grid-template-columns: 35fr 65fr;
+          gap: 35px;
+          padding: 35px 30px;
+        }
+
+        .aboutimgsec {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .aboutimgsec img {
+          width: 75%;
+          max-width: 400px;
+          height: auto;
+        }
+
+        .mainpara {
+          font-size: 12px;
+          line-height: 1.6;
+          gap: 18px;
+        }
+
+        .thingsilove {
+          font-size: 28px;
+        }
+
+        .lookwhaticando {
+          font-size: 28px;
+        }
+
+        .thingsdologos {
+          gap: 12px;
+        }
+
+        .thingsiloveul {
+          gap: 25px;
+        }
+
+        .thingsiloveul li {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body id="top">
+    <header>
+      <div class="header-bar">
+        <div>
+          <span class="logo-text"> <em>B</em>hargava. </span>
+        </div>
+
+        <nav class="nav-items">
+          <a href="#top">Home</a>
+          <a href="#about-me-heading">About</a>
+          <a href="#my-work">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div>
+          <a
+            href="https://www.linkedin.com/in/bhargava-chandra-5b9b36336"
+            target="_blank"
+          >
+            <button class="btn-primary">Let's Connect</button>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="hero-layout">
+          <div class="hero-text">
+            <p class="hello">Hi, I'm Bhargava.</p>
+
+            <h1 class="hero-title">Entrepreneur, Designer, Developer</h1>
+
+            <p class="hero-desc">
+              An Entrepreneur, Designer, and Developer, I founded an agency
+              called Minimal Pixels and I am also a PS Designer and a Full Stack
+              MEAN Developer.
+            </p>
+
+            <div class="hero-btns">
+              <a
+                href="https://www.linkedin.com/in/bhargava-chandra-5b9b36336"
+                class="btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Let's Connect</a
+              >
+
+              <a href="#my-work" class="btn-ghost">Experience</a>
+            </div>
+
+            <div class="hero-icons">
+              <a
+                href="https://www.linkedin.com/in/bhargava-chandra-5b9b36336"
+                class="hero-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a
+                href="https://www.instagram.com/_urstrulybhargav_/"
+                class="hero-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a
+                href="https://github.com/Bhargava2008"
+                class="hero-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="https://minimalpixels.surge.sh/"
+                class="hero-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-avatar">
+            <img src="Bhargava.png" alt="Bhargava's portrait" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="about-me-heading">
+          <div class="row-heading">
+            <hr />
+
+            <span class="main-about"> ABOUT <span>ME</span> </span>
+
+            <hr />
+          </div>
+
+          <div>
+            <span class="allow-me"> ALLOW ME TO INTRODUCE MYSELF! </span>
+          </div>
+
+          <div class="aboutsec">
+            <div class="aboutimgsec">
+              <img src="aboutpic.jpeg" alt="Bhargava robo picture" />
+            </div>
+
+            <div class="mainpara">
+              <span class="para1">
+                I am Bhargav. A developer, designer, creator and an aspiring
+                entrepreneur who enjoys building things from scratch. Bhargav
+                has always been curious about how things work. Bhargav finds
+                excitement in taking an idea that exists in Bhargavs mind and
+                turning it into something people can actually use. Bhargav is
+                currently studying technology while constantly learning,
+                experimenting and working on projects that push Bhargav beyond
+                what Bhargav knows.
+              </span>
+
+              <span class="para2">
+                Bhargav enjoys being involved in parts of the process. From
+                designing an interface and writing code to thinking about the
+                product, the user and the bigger idea behind it. Bhargav has
+                worked with technologies such as HTML, CSS, JavaScript, Java,
+                Node.js, Express.js, MongoDB, SQL, React, Git and Linux and
+                Bhargav is continuously expanding skills.
+              </span>
+
+              <span class="para3">
+                Alongside technology Bhargav is interested in startups,
+                business, design, marketing and product building. Bhargav is the
+                founder of Minimal Pixels, an agency and startup focused on
+                connecting creators and businesses with quick accessible
+                creative services such as thumbnails, video editing, social
+                media designs, branding and more.
+              </span>
+
+              <span class="para4">
+                Building Minimal Pixels has taught Bhargav that creating a
+                product is not about writing code. It is, about understanding
+                people solving real problems testing ideas and being willing to
+                start before everything is perfect.
+              </span>
+
+              <span class="para5">
+                Bhargav is still learning, still experimenting and still
+                figuring things out. And honestly that is what Bhargav enjoys
+                most. Bhargav does not just want to learn technology; Bhargav
+                wants to use technology to build things that matter.
+              </span>
+            </div>
+
+            <div class="thingsilovediv">
+              <span class="thingsilove"> Things I Love </span>
+
+              <div class="thingsdologos">
+                <div>
+                  <i class="si si-html5 htmllogo"></i>
+                  <span>HTML</span>
+                </div>
+
+                <div>
+                  <img src="css.png" class="csslogo" alt="CSS" />
+                  <span>CSS</span>
+                </div>
+
+                <div>
+                  <i class="si si-javascript jslogo"></i>
+                  <span>JavaScript</span>
+                </div>
+
+                <div>
+                  <i class="si si-nodedotjs nodelogo"></i>
+                  <span>Node.js</span>
+                </div>
+
+                <div>
+                  <i class="si si-express expresslogo"></i>
+                  <span>Express</span>
+                </div>
+
+                <div>
+                  <i class="si si-mongodb mongologo"></i>
+                  <span>MongoDB</span>
+                </div>
+
+                <div>
+                  <img src="ps.png" class="pslogo" alt="Photoshop" />
+                  <span>Photoshop</span>
+                </div>
+
+                <div>
+                  <img src="capcut.png" class="capcutlogo" alt="CapCut" />
+                  <span>CapCut</span>
+                </div>
+
+                <div>
+                  <img
+                    src="startup.png"
+                    class="startuplogo"
+                    alt="Startup India"
+                  />
+                  <span>Startup India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="thingsiloveuldiv">
+              <div class="lookwhaticando">Look What I Can Do</div>
+
+              <div class="thingsiloveul">
+                <ul>
+                  <li>Web Development</li>
+                  <li>JavaScript / React</li>
+                  <li>AI Applications</li>
+                  <li>UI & Creative Design</li>
+                  <li>Video Editing</li>
+                  <li>Content Creation</li>
+                  <li>Product Building</li>
+                  <li>Startup & Business</li>
+                  <li>Problem Solving</li>
+                </ul>
+
+                <ul>
+                  <li>Backend Development</li>
+                  <li>Node.js / Express</li>
+                  <li>Database Development</li>
+                  <li>Branding & Visual Design</li>
+                  <li>Motion Graphics</li>
+                  <li>YouTube Design</li>
+                  <li>MVP Development</li>
+                  <li>Marketing & GTM</li>
+                  <li>Git / Linux / Deployment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="my-work">
+          <div class="row-heading">
+            <hr />
+
+            <span class="main-about"> MY <span>WORK</span> </span>
+
+            <hr />
+          </div>
+
+          <div>
+            <span class="allow-me">
+              A few things I've built, designed, and experimented with.
+            </span>
+          </div>
+
+          <div class="workcontainers">
+            <div class="worknumber">
+              <span> 01</span>
+            </div>
+
+            <div class="workheading">Library Management System</div>
+
+            <div class="workdescription">
+              <span>
+                A full-stack library system built for students, librarians with
+                books management, issue requests, fines, Mails, authentication
+                and role based dashboards.
+              </span>
+            </div>
+
+            <div class="workdescription">
+              <span> What I did: <b>Design. Frontend. Backend</b></span>
+            </div>
+
+            <div class="buttonrowwork">
+              <button>Node.js</button>
+              <button>Express</button>
+              <button>MongoDB</button>
+              <button>JWT</button>
+              <button>HTML</button>
+              <button>CSS</button>
+              <button>JS</button>
+            </div>
+
+            <div class="buttonworktwo">
+              <a
+                href="https://github.com/Bhargava2008/lms-official.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="workcontainers">
+            <div class="worknumber">
+              <span> 02</span>
+            </div>
+
+            <div class="workheading">Mentor Scoring AI</div>
+
+            <div class="workdescription">
+              <span>
+                An AI-powered system that analyzes recorded mentoring sessions
+                by converting speech into transcripts, detecting pauses and
+                audio patterns, and using AI to generate a score.
+              </span>
+            </div>
+
+            <div class="workdescription">
+              <span> What I did: <b>AI · Audio Processing · Backend</b></span>
+            </div>
+
+            <div class="buttonrowwork">
+              <button>AI</button>
+              <button>Whisper</button>
+              <button>Groq</button>
+              <button>MediaPipe</button>
+              <button>Audio Processing</button>
+            </div>
+
+            <div class="buttonworktwo">
+              <a
+                href="https://github.com/Bhargava2008/MENTOR-SCORING-AI.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="workcontainers">
+            <div class="worknumber">
+              <span> 03 — FEATURED</span>
+            </div>
+
+            <div class="workheading">Minimal Pixels</div>
+
+            <div class="workdescription">
+              <span>
+                A creative agency and startup I'm building to connect creators
+                and businesses with accessible creative services — from
+                thumbnails and video editing to branding and social media
+                content.
+              </span>
+            </div>
+
+            <div class="workdescription">
+              <span>
+                What I did: <b>Founder · Product · Design · Brand</b>
+              </span>
+            </div>
+
+            <div class="buttonrowwork">
+              <button>Startup</button>
+              <button>Design</button>
+              <button>Marketplace</button>
+              <button>Business</button>
+              <button>Product</button>
+              <button>Creative Services</button>
+            </div>
+
+            <div class="buttonworktwo">
+              <a
+                href="https://minimalpixels.surge.sh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit Minimal Pixels</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="achievements">
+          <div class="row-heading">
+            <hr />
+
+            <span class="main-about"> ACHIEVE<span>MENTS</span> </span>
+
+            <hr />
+          </div>
+
+          <div>
+            <span class="allow-me">
+              Milestones, wins and things I'm genuinely proud of.
+            </span>
+          </div>
+
+          <div class="achievements">
+            <div class="achievementcontainer">
+              <div class="achievementimage">
+                <img src="scaler.png" alt="Scaler School of Technology" />
+              </div>
+
+              <div class="achievementcontent">
+                <span class="achievementnumber"> 01 </span>
+
+                <h2>Scaler School of Technology</h2>
+
+                <p>
+                  Selected for Scaler School of Technology's AI & Business
+                  program — exploring technology, product building, business and
+                  entrepreneurship.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="achievementcontainer"
+              style="
+                background: linear-gradient(135deg, #4c2380, #7d2ae8);
+                color: #ffffff;
+              "
+            >
+              <div
+                class="achievementimage imgachi"
+                style="background: transparent"
+              >
+                <img
+                  src="upskill.png"
+                  alt="3rd place at Upskill India Challenge, IIT Bombay"
+                  class="imageupskill"
+                />
+              </div>
+
+              <div class="achievementcontent">
+                <span class="achievementnumber" style="color: #ffffff">
+                  02
+                </span>
+
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.12);
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    border-radius: 18px;
+                    padding: 18px 22px;
+                    margin: 20px 0 25px 0;
+                  "
+                >
+                  <h2 style="color: #ffffff; margin: 0; font-size: 40px">
+                    3RD PLACE
+                  </h2>
+
+                  <h3 style="color: #ffffff; margin: 2px 0; font-size: 18px">
+                    UPSKILL INDIA CHALLENGE
+                  </h3>
+
+                  <p style="color: #e6d9ff; margin: 0; font-weight: 600">
+                    IIT BOMBAY
+                  </p>
+                </div>
+
+                <p style="color: #ffffff">
+                  Secured 3rd place at the Upskill India Challenge held at IIT
+                  Bombay with my Mentor Scoring AI project.
+                </p>
+              </div>
+            </div>
+
+            <div class="achievementcontainer">
+              <div class="achievementimage">
+                <img
+                  src="minimal.png"
+                  alt="Collage of YouTube thumbnails designed by Bhargava"
+                />
+              </div>
+
+              <div class="achievementcontent">
+                <span class="achievementnumber"> 03 </span>
+
+                <h2>Design → Audience Growth</h2>
+
+                <p>Designed thumbnails for YouTube channels that grew from:</p>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px">
+                  <div
+                    style="
+                      background: #f5efff;
+                      border: 1px solid #d9c2ff;
+                      border-radius: 16px;
+                      padding: 12px 18px;
+                      color: #7d2ae8;
+                      font-weight: 600;
+                    "
+                  >
+                    <span style="color: #6b6d70"> 80K </span>
+                    →
+                    <strong> 180K </strong>
+                  </div>
+
+                  <div
+                    style="
+                      background: #f5efff;
+                      border: 1px solid #d9c2ff;
+                      border-radius: 16px;
+                      padding: 12px 18px;
+                      color: #7d2ae8;
+                      font-weight: 600;
+                    "
+                  >
+                    <span style="color: #6b6d70"> 3K </span>
+                    →
+                    <strong> 15K </strong>
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    margin-top: 15px;
+                    color: #6b6d70;
+                    font-size: 13px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                  "
+                >
+                  SUBSCRIBERS
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="getintouch" id="contact">
+        <div class="getintouchheading">
+          <hr />
+          <span>LET'S <b>CONNECT</b></span>
+          <hr />
+        </div>
+
+        <div class="getintouchintro">
+          <h2>Have an idea? <span>Let's build something.</span></h2>
+
+          <p>
+            I'm always open to interesting projects, collaborations, creative
+            <br />
+            work, and new ideas.
+          </p>
+        </div>
+
+        <div class="getintouchcontainer">
+          <div class="getintouchtitle">GET IN TOUCH</div>
+
+          <a
+            href="mailto:vakkalagaddabhargavachandra@gmail.com"
+            class="contactbox"
+          >
+            <div class="contacticon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="contacttext">
+              <span>EMAIL</span>
+              <p>vakkalagaddabhargavachandra@gmail.com</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/bhargava-chandra-5b9b36336"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contactbox"
+          >
+            <div class="contacticon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+            <div class="contacttext">
+              <span>LINKEDIN</span>
+              <p>Bhargava Chandra</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/_urstrulybhargav_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contactbox"
+          >
+            <div class="contacticon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="contacttext">
+              <span>INSTAGRAM</span>
+              <p>@_urstrulybhargav_</p>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/Bhargava2008"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contactbox"
+          >
+            <div class="contacticon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+
+            <div class="contacttext">
+              <span>GITHUB</span>
+              <p>bhargava2008</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="emailbutton">
+          <a href="mailto:vakkalagaddabhargavachandra@gmail.com">
+            MESSAGE ME →
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/bhargava-chandra-5b9b36336"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="linkedin-link"
+          >
+            LINKEDIN →
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
